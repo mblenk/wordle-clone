@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  margin: 10px auto;
+  text-align: center;
+  background-color: black;
+  width: 50%;
+  padding:10px;
+}
+.app-header {
+  color:white;
+  border-bottom: 2px solid white;
+  font-family: Arial, Helvetica, sans-serif
+}
+.input-grid {
+  margin: 10px auto;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 50%;
+  aspect-ratio: 1/1;
+
+}
+.input-field {
+  width:80%;
+  border: 1px solid grey;
+  margin: 2px 2px 2px 2px;
+  background-color: black;
+  aspect-ratio: 1/1;
+  color:white;
+  text-align:center;
+}
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  
+}
+.rowOne {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.rowTwo {
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+}
+.rowThree {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.key {
+  background-color: darkgrey;
+  color: white;
+  font-size:x-small;
+  min-width: 4vh;
+  min-height: 7vh;
+  margin: 2px 2px 2px 2px;
+  border-radius: 5px;
+  border: none;
+}
+.enter {
+  min-width: auto;
+  min-height: 7vh;
+}
+.delete {
+  min-width: auto;
+  min-height: 7vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.rightLetterRightPlace {
+  background-color: green;
+}
+.rightLetterWrongPlace {
+  background-color: rgb(179, 179, 2);
+}
+
+/* Modal */
+.modal-hidden {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-visible {
+  display: block; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-box {
+  background-color: #fefefe;
+  margin: 25% auto; 
+  padding: 20px;
+  border: 3px solid black;
+  width: 40%; 
+  height: 30%;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+#modal-text {
+  font-size:125%;
+  font-weight: bold;
+}
+#modal-index {
+  font-size: 75%;
+}
+.close-modal {
+  color:darkred;
+  background:transparent;
+  border-color: transparent;
+  position:absolute;
+  top: 5%;
+  right: 2%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
